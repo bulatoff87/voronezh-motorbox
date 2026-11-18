@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Воронеж Моторбокс — автосервис в Воронеже</title>
+  <meta name="description" content="Демо сайта автосервиса в Воронеже. Диагностика, техническое обслуживание, ремонт подвески и тормозной системы. Пример формы записи на обслуживание.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#161613">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Воронеж Моторбокс — демо сайта автосервиса">
+  <meta property="og:description" content="Услуги автосервиса и демонстрационная форма записи.">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+  <header class="top">
+    <div class="shell top-inner">
+      <a class="wordmark" href="#main"><span class="mark" aria-hidden="true"></span><span>МОТОРБОКС<small>ВОРОНЕЖ</small></span></a>
+      <nav aria-label="Навигация"><a href="#services">Услуги</a><a href="#process">Как работаем</a><a href="#questions">Вопросы</a></nav>
+      <a class="button top-action" href="#booking">Записаться <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="label"><span class="dot" aria-hidden="true"></span> Воронеж · Демо-сайт</p>
+        <h1 id="hero-title">Автосервис<br>в Воронеже<span class="accent">.</span></h1>
+        <p class="hero-lead">От планового ТО до ремонта подвески. Выберите услугу и опишите, что нужно проверить в вашем автомобиле.</p>
+        <div class="hero-actions"><a class="button primary" href="#booking">Оставить заявку <span aria-hidden="true">↗</span></a><a class="simple" href="#services">Посмотреть услуги <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <figure class="hero-image">
+        <img src="workshop.webp" width="1536" height="1024" alt="Автомобиль с открытым капотом в ремонтном боксе. Иллюстрация." fetchpriority="high">
+      </figure>
+    </section>
+
+    <section class="service-band" id="services" aria-labelledby="services-title">
+      <div class="shell section">
+        <div class="section-head"><h2 id="services-title">Услуги автосервиса</h2><p>Выбранная услуга автоматически появится в форме заявки.</p></div>
+        <div class="services">
+          <article><h3>Диагностика</h3><p>Поиск причины ошибки на приборной панели, шума или вибрации.</p><a href="#booking" data-service="Диагностика">Выбрать диагностику <span aria-hidden="true">↗</span></a></article>
+          <article><h3>Техническое обслуживание</h3><p>Замена масла, фильтров и технических жидкостей по регламенту.</p><a href="#booking" data-service="Техническое обслуживание">Выбрать ТО <span aria-hidden="true">↗</span></a></article>
+          <article><h3>Ремонт подвески</h3><p>Проверка амортизаторов, рычагов и других деталей ходовой части.</p><a href="#booking" data-service="Ремонт подвески">Выбрать ремонт подвески <span aria-hidden="true">↗</span></a></article>
+          <article><h3>Тормозная система</h3><p>Проверка состояния тормозов, замена колодок и дисков.</p><a href="#booking" data-service="Тормозная система">Выбрать обслуживание тормозов <span aria-hidden="true">↗</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell section" id="process" aria-labelledby="process-title">
+      <div class="section-head"><h2 id="process-title">Как проходит визит</h2></div>
+      <ol class="process">
+        <li><h3>Заявка</h3><p>Укажите услугу, марку машины и что вас беспокоит.</p></li>
+        <li><h3>Осмотр</h3><p>Мастер проверяет автомобиль и объясняет, какие работы нужны.</p></li>
+        <li><h3>Согласование</h3><p>После осмотра можно обсудить стоимость, запчасти и сроки.</p></li>
+      </ol>
+    </section>
+
+    <section class="shell booking" id="booking" aria-labelledby="booking-title">
+      <div class="booking-intro">
+        <h2 id="booking-title">Запись в автосервис</h2>
+        <p>Попробуйте заполнить заявку тестовыми данными. Форма работает в демонстрационном режиме.</p>
+        <div class="contact"><span>Телефон для макета</span><strong>+7 (000) 000-00-00</strong></div>
+      </div>
+      <form id="request" method="dialog" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="name">Имя <span>*</span></label><input id="name" name="name" autocomplete="off" placeholder="Например, Алексей" maxlength="60" required aria-describedby="name-error"><small class="error" id="name-error"></small></div>
+          <div class="field"><label for="phone">Телефон <span>*</span></label><input id="phone" name="phone" type="tel" autocomplete="off" placeholder="+7 (000) 000-00-00" maxlength="24" required aria-describedby="phone-error"><small class="error" id="phone-error"></small></div>
+          <div class="field"><label for="service">Услуга <span>*</span></label><select id="service" name="service" required aria-describedby="service-error"><option value="">Выберите услугу</option><option>Диагностика</option><option>Техническое обслуживание</option><option>Ремонт подвески</option><option>Тормозная система</option><option>Другая услуга</option></select><small class="error" id="service-error"></small></div>
+          <div class="field"><label for="car">Автомобиль</label><input id="car" name="car" placeholder="Марка, модель, год" maxlength="80"></div>
+          <div class="field wide"><label for="message">Комментарий</label><textarea id="message" name="message" placeholder="Например, появился стук при проезде неровностей" rows="3" maxlength="500"></textarea></div>
+        </div>
+        <div class="form-actions"><button type="submit" class="button primary">Проверить заявку <span aria-hidden="true">↗</span></button><p>* Обязательные поля. Данные проверяются в браузере.</p></div>
+        <p id="form-result" class="result" role="status"></p>
+        <noscript><p>Для проверки формы включите JavaScript.</p></noscript>
+      </form>
+    </section>
+
+    <section class="shell section questions" id="questions" aria-labelledby="questions-title">
+      <div class="section-head"><h2 id="questions-title">Частые вопросы</h2></div>
+      <div>
+        <details><summary>Какие данные об автомобиле пригодятся?</summary><p>Марка, модель, год выпуска и описание симптома. Например, когда появляется шум или какая ошибка видна на панели.</p></details>
+        <details><summary>Когда можно узнать стоимость ремонта?</summary><p>Она зависит от причины неисправности, объёма работ и стоимости запчастей. Перечень работ обычно согласовывают после диагностики.</p></details>
+        <details><summary>Можно ли записаться через этот сайт?</summary><p>На этой странице можно проверить, как работает форма. Реальная запись через учебное демо недоступна.</p></details>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="shell footer-inner"><a class="wordmark" href="#main"><span class="mark" aria-hidden="true"></span><span>МОТОРБОКС<small>ВОРОНЕЖ</small></span></a><p>Демонстрационный проект автосервиса</p><a href="#main">Наверх ↑</a></div></footer>
+</body>
+</html>
